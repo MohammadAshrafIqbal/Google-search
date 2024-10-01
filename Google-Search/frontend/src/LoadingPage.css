@@ -1,0 +1,100 @@
+/* src/LoadingPage.css */
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #121212; /* Dark background for a premium feel */
+  color: #e0e0e0; /* Light text color for contrast */
+  line-height: 1.6;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Loader Container Styles */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #121212, #1e1e1e); /* Darker gradient background */
+  color: #ffffff; /* Light text color for contrast */
+  position: relative; /* Ensure positioning for transition */
+  overflow: hidden; /* Prevent overflow for cleaner UI */
+}
+
+/* Heading Styling */
+.loader-container h2 {
+  font-size: 2.4rem; /* Larger font size for prominence */
+  margin-bottom: 1rem;
+  font-weight: 700; /* Extra bold for a stronger visual impact */
+  color: #61dafb; /* React blue for branding */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced shadow for better visibility */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth color and transform transition */
+}
+
+.loader-container h2:hover {
+  color: #4fa3d9; /* Slightly darker blue on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Paragraph Styling */
+.loader-container p {
+  font-size: 1.4rem; /* Larger text size for better readability */
+  margin-bottom: 2rem;
+  color: #b0b0b0; /* Light gray for readability */
+  line-height: 1.8; /* Better spacing between lines */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.loader-container p:hover {
+  color: #e0e0e0; /* Slightly lighter gray on hover */
+}
+
+/* Link Styling */
+.link-protected {
+  color: #61dafb; /* React blue for branding */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.link-protected:hover {
+  color: #4fa3d9; /* Slightly darker blue on hover */
+}
+
+/* Loader Styling */
+.loader {
+  width: 100px; /* Fixed size for the loader */
+  height: 100px; /* Fixed size for the loader */
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(97, 218, 251, 0.8) 20%, rgba(0, 0, 0, 0.2) 80%);
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.5); /* Glowing effect */
+  animation: spin 1.5s linear infinite, pulse 1.5s ease-in-out infinite;
+  margin-bottom: 2rem;
+}
+
+/* Keyframes for Spin Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Ensure body allows scrolling */
+body, html {
+  overflow: auto; /* Allow scrolling */
+}

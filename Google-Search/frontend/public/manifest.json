@@ -1,0 +1,28 @@
+{
+  "short_name": "React App",
+  "name": "Google Drive Direct Download Link Provider",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "any",
+  "description": "A service providing direct download links to Google Drive files without ads.",
+  "scope": "/"
+}

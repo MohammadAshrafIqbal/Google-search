@@ -1,0 +1,116 @@
+/* src/index.css */
+
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background for consistency */
+    color: #e0e0e0; /* Light text color for contrast */
+    line-height: 1.6;
+  }
+  
+  /* Container Styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the container fills the viewport height */
+  }
+  
+  /* Header Styles */
+  header {
+    background: #1f1f1f; /* Consistent dark background for header */
+    padding: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #333333;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure header stays on top */
+  }
+  
+  /* Centered Header Title */
+  header h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Main Content Styles */
+  main {
+    flex: 1; /* Allow main content to take available space */
+    padding: 20px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background: #1f1f1f; /* Matching dark background for footer */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #333333;
+  }
+  
+  /* Utility Classes */
+  .hidden {
+    display: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    input[type="text"],
+    button {
+      width: 100%;
+    }
+  }
+  
+  /* Additional Styles */
+  a {
+    color: #009688;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #004d40;
+  }
+  
+  /* Error Message Styles */
+  .error-message {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    background-color: #f8d7da;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  /* Loading Spinner */
+  .spinner {
+    border: 4px solid #f3f3f3; /* Light grey background */
+    border-top: 4px solid #3498db; /* Blue spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
